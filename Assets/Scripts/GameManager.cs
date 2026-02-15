@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
     //Public variables
     public static event Action GameClock;
 
-    [Header("Food")]
-    public GameObject foodPrefab;
+    [Header("Map")]
+    public MapManager mapManager;
     public float foodSpawnFrequence = 5.0f; //in seconds
 
     [Header("Movement")]
@@ -27,12 +27,8 @@ public class GameManager : MonoBehaviour
     public bool soundOn = true;
 
     [Header("UI")]
-    public GameObject gameOverText;
-    public GameObject pauseText;
-
-    [Header("Scenes")]
-    public int gameSceneIndex = 0;
-    public int titleSceneIndex = 1;
+    public GameObject gameOverScreen;
+    public GameObject pauseScreen;
 
     //Private variables
     private float moveTimer;
@@ -69,12 +65,15 @@ public class GameManager : MonoBehaviour
         controlActions.Enable();
         pauseAction = controlActions.FindAction("Pause");
 
+        //Initialize managers
+        mapManager.Initialize();
+
         //check states
-        gameOverText.SetActive(false);
-        pauseText.SetActive(false);
+        gameOverScreen.SetActive(false);
+        pauseScreen.SetActive(false);
 
         //Spawn one food item
-        SpawnFood();
+        mapManager.SpawnFood();
 
         Debug.Log("Game Started");
     }
@@ -113,7 +112,7 @@ public class GameManager : MonoBehaviour
         //if if 'frequence' seconds have passed
         if (foodTimer >= frequence)
         {
-            SpawnFood();
+            mapManager.SpawnFood();
             
             //move timer back by 'frequence' seconds
             foodTimer = 0.0f;
@@ -136,20 +135,7 @@ public class GameManager : MonoBehaviour
             speedUpTimer = 0.0f;
         }
     }
-    //=======================================================================
-    //GameObject Instantiation
-    //=======================================================================
-    
-    private void SpawnFood()
-    {
-        //Calculate spawn coordinates
-        float coorX = UnityEngine.Random.Range(-7.5f, 7.5f);
-        float coorZ = UnityEngine.Random.Range(-5.0f, 5.0f);
-        Vector3 spawnCoords = new Vector3(((int)coorX), 0.0f, ((int)coorZ));
-
-        //Spawn food item
-        Instantiate(foodPrefab, spawnCoords, Quaternion.identity);
-    }
+  
     //=======================================================================
     //Game State
     //=======================================================================
@@ -160,7 +146,7 @@ public class GameManager : MonoBehaviour
         controlActions.Disable();
 
         //show 'GAME OVER' text
-        gameOverText.SetActive(true);
+        gameOverScreen.SetActive(true);
     }
     //-------------------------------------------------
     public void Pause()
@@ -169,13 +155,13 @@ public class GameManager : MonoBehaviour
         {
             gameActive = false;
             gamePaused = true;
-            pauseText.SetActive(true);
+            pauseScreen.SetActive(true);
         }
         else
         {
             gameActive = true;
             gamePaused = false;
-            pauseText.SetActive(false);
+            pauseScreen.SetActive(false);
         }
     }
     //-------------------------------------------------

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Food
   - Tail
+  - Wall
   layers:
   - Default
   - TransparentFX

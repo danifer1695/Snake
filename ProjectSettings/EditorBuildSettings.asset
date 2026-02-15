@@ -9,8 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: ceddbc4f336474c4d8ffc8fbbbb5c495
   - enabled: 1
-    path: Assets/Scenes/Game.unity
+    path: Assets/Scenes/Map_Grasslands.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Map_Fortress.unity
+    guid: 17131b47a9338c945ba5b359e7da1555
+  - enabled: 1
+    path: Assets/Scenes/Map_RockyDesert.unity
+    guid: bad73e4b700d50f48a120dc11a328453
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -58,7 +58,8 @@ public class Snake : MonoBehaviour
         Debug.Log("Collision detected: " + other.name);
         //If we collide with a 'Food' tagged object, instantiate a tail segment into the tail list
         if (other.CompareTag("Food")) FoodCollision(other);
-        if (other.CompareTag("Tail")) TailCollision(other);
+        if (other.CompareTag("Tail") || 
+            other.CompareTag("Wall")) TailCollision(other);
     }
 
     //Update

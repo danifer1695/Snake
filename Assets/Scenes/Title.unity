@@ -1843,6 +1843,7 @@ GameObject:
   - component: {fileID: 1483087847}
   - component: {fileID: 1483087846}
   - component: {fileID: 1483087845}
+  - component: {fileID: 1483087848}
   m_Layer: 5
   m_Name: Fortress Button
   m_TagString: Untagged
@@ -1914,16 +1915,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7973011579100442954}
-        m_TargetAssemblyTypeName: LoadManager, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 3
+      - m_Target: {fileID: 1483087848}
+        m_TargetAssemblyTypeName: LoaderMenuButton, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Map_Fortress
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 943243613}
@@ -1976,6 +1977,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1483087843}
   m_CullTransparentMesh: 1
+--- !u!114 &1483087848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483087843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cea29edab9bfbb438ef747576b4af30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoaderMenuButton
 --- !u!1 &1497333516
 GameObject:
   m_ObjectHideFlags: 0
@@ -1988,6 +2001,7 @@ GameObject:
   - component: {fileID: 1497333520}
   - component: {fileID: 1497333519}
   - component: {fileID: 1497333518}
+  - component: {fileID: 1497333521}
   m_Layer: 5
   m_Name: Rocky Desert Button
   m_TagString: Untagged
@@ -2059,16 +2073,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7973011579100442954}
-        m_TargetAssemblyTypeName: LoadManager, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 3
+      - m_Target: {fileID: 1497333521}
+        m_TargetAssemblyTypeName: LoaderMenuButton, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 4
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Map_RockyDesert
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 943243613}
@@ -2121,6 +2135,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497333516}
   m_CullTransparentMesh: 1
+--- !u!114 &1497333521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497333516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cea29edab9bfbb438ef747576b4af30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoaderMenuButton
 --- !u!1 &1507407887
 GameObject:
   m_ObjectHideFlags: 0
@@ -2278,6 +2304,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1507407887}
   m_CullTransparentMesh: 1
+--- !u!1001 &1512198267
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3926786647913431513, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.26036
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926786647913431513, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926786647913431513, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -17.66695
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926786647913431513, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926786647913431513, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926786647913431513, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926786647913431513, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926786647913431513, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926786647913431513, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3926786647913431513, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743104552211910948, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
+      propertyPath: m_Name
+      value: LoadManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
 --- !u!1 &1609604540
 GameObject:
   m_ObjectHideFlags: 0
@@ -3014,6 +3097,7 @@ GameObject:
   - component: {fileID: 1885680018}
   - component: {fileID: 1885680017}
   - component: {fileID: 1885680016}
+  - component: {fileID: 1885680019}
   m_Layer: 5
   m_Name: Grasslands Button
   m_TagString: Untagged
@@ -3085,16 +3169,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7973011579100442954}
-        m_TargetAssemblyTypeName: LoadManager, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 3
+      - m_Target: {fileID: 1885680019}
+        m_TargetAssemblyTypeName: LoaderMenuButton, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Map_Grasslands
           m_BoolArgument: 0
         m_CallState: 1
       - m_Target: {fileID: 943243613}
@@ -3147,6 +3231,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885680014}
   m_CullTransparentMesh: 1
+--- !u!114 &1885680019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885680014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cea29edab9bfbb438ef747576b4af30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoaderMenuButton
 --- !u!114 &1900338055 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1087427568942525897, guid: 053248cd345459147893a67504872327, type: 3}
@@ -3506,74 +3602,6 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 3196740260155582551, guid: 799496016b2027e439dd7bd3d307d728, type: 3}
   m_PrefabInstance: {fileID: 3445410373488450470}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &7973011579100442953
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3926786647913431513, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 320.07587
-      objectReference: {fileID: 0}
-    - target: {fileID: 3926786647913431513, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3926786647913431513, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2941.851
-      objectReference: {fileID: 0}
-    - target: {fileID: 3926786647913431513, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3926786647913431513, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3926786647913431513, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3926786647913431513, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3926786647913431513, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3926786647913431513, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3926786647913431513, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5743104552211910948, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
-      propertyPath: m_Name
-      value: LoadManager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
---- !u!114 &7973011579100442954 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7681222418321051473, guid: c440c5ad277eb5e4b825d6d2e3a886f6, type: 3}
-  m_PrefabInstance: {fileID: 7973011579100442953}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 486d13542128b32459c06519acda9008, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LoadManager
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3581,5 +3609,5 @@ SceneRoots:
   - {fileID: 274970493}
   - {fileID: 1317380932}
   - {fileID: 1609604543}
-  - {fileID: 7973011579100442953}
   - {fileID: 3445410373488450470}
+  - {fileID: 1512198267}

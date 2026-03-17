@@ -26,10 +26,6 @@ public class GameManager : MonoBehaviour
     public InputActionMap controlActions;
     public bool soundOn = true;
 
-    [Header("UI")]
-    public GameObject gameOverScreen;
-    public GameObject pauseScreen;
-
     //Private variables
     private float moveTimer;
     private float foodTimer;
@@ -67,13 +63,6 @@ public class GameManager : MonoBehaviour
 
         //Initialize managers
         mapManager.Initialize();
-
-        //check states
-        gameOverScreen.SetActive(false);
-        pauseScreen.SetActive(false);
-
-        //Spawn one food item
-        mapManager.SpawnFood();
 
         Debug.Log("Game Started");
     }
@@ -146,7 +135,7 @@ public class GameManager : MonoBehaviour
         controlActions.Disable();
 
         //show 'GAME OVER' text
-        gameOverScreen.SetActive(true);
+        UIManager.Instance.ShowGameOverMenu();
     }
     //-------------------------------------------------
     public void Pause()
@@ -155,13 +144,13 @@ public class GameManager : MonoBehaviour
         {
             gameActive = false;
             gamePaused = true;
-            pauseScreen.SetActive(true);
+            UIManager.Instance.ShowPauseMenu();
         }
         else
         {
             gameActive = true;
             gamePaused = false;
-            pauseScreen.SetActive(false);
+            UIManager.Instance.HidePauseMenu();
         }
     }
     //-------------------------------------------------

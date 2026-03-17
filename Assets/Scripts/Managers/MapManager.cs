@@ -1,7 +1,5 @@
-using NUnit.Framework;
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEditor.Rendering.Universal;
 using System;
 
 //This script manages everything related to the map
@@ -26,11 +24,13 @@ public class MapManager : MonoBehaviour
         {
             wallPositions.Add(
                 new Vector2Int(
-                    Mathf.RoundToInt(wall.position.z),
+                    Mathf.RoundToInt(wall.position.x),
                     Mathf.RoundToInt(wall.position.z)
                 )
             );
         }
+
+        SpawnFood();
     }
 
     //=======================================================================

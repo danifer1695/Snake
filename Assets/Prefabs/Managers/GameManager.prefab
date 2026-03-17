@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8932244538377485589}
   - component: {fileID: 3557873783781697544}
   - component: {fileID: 1757158145812617353}
+  - component: {fileID: 2629946564231447964}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -48,8 +49,7 @@ MonoBehaviour:
   mapManager: {fileID: 1757158145812617353}
   foodSpawnFrequence: 10
   moveFrequence: 1
-  speedUpFrequence: 10
-  speedUpFactor: 0.975
+  gameClock: {fileID: 2629946564231447964}
   controlActions:
     m_Name: Control Actions
     m_Id: c8294944-a300-4bfc-900c-46cfb296222a
@@ -73,8 +73,6 @@ MonoBehaviour:
       m_Action: Pause
       m_Flags: 0
   soundOn: 1
-  gameOverScreen: {fileID: 0}
-  pauseScreen: {fileID: 0}
 --- !u!114 &1757158145812617353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,3 +89,17 @@ MonoBehaviour:
   MapLimitZ: 6
   walls: []
   foodPrefab: {fileID: 6870314608608167878, guid: 25bff8c6dd76cca419e1f45384aa83b5, type: 3}
+--- !u!114 &2629946564231447964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5704748929101654653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f709e5a66bbe924449fbe706416e2097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameClock
+  speedUpFrequency: 10
+  speedUpFactor: 0.95

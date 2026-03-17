@@ -49,7 +49,7 @@ public class Snake : MonoBehaviour
         moveAction.Disable();
 
         //unsubscribe from events
-        GameManager.GameClock -= Move;
+        GameClock.clockTick -= Move;
     }
 
     //Collisions
@@ -84,7 +84,7 @@ public class Snake : MonoBehaviour
         moveAction.Enable();
 
         //subscribe to events
-        GameManager.GameClock += Move;
+        GameClock.clockTick += Move;
     }
     //=======================================================================
     //Movement

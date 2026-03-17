@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\UIAudio.cs" />
     <Compile Include="Assets\Scripts\VolumeToggleButton.cs" />
+    <Compile Include="Assets\Scripts\Managers\GameClock.cs" />
     <Compile Include="Assets\Scripts\Managers\LoadManager.cs" />
     <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
     <Compile Include="Assets\Scripts\Snake.cs" />

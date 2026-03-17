@@ -9,27 +9,19 @@ using UnityEngine.InputSystem;
 public class GameManager : MonoBehaviour
 {
     //Public variables
-    public static event Action GameClock;
+    //public static event Action GameClock;
 
     [Header("Map")]
     public MapManager mapManager;
     public float foodSpawnFrequence = 5.0f; //in seconds
 
-    [Header("Movement")]
-    public float moveFrequence = 1.0f; //in seconds
-
-    [Header("Movement Speed Up")]
-    public float speedUpFrequence = 10.0f; //in seconds
-    public float speedUpFactor = 0.95f;
-
     [Header("Settings")]
+    public GameClock gameClock;
     public InputActionMap controlActions;
     public bool soundOn = true;
 
     //Private variables
-    private float moveTimer;
     private float foodTimer;
-    private float speedUpTimer;
     private bool gameActive = true;
     private bool gamePaused = false;
 
@@ -44,14 +36,13 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         PollInput();
-
-        if (gameActive)
-        {
-            MoveTimer(moveFrequence);
-            FoodSpawnTimer(foodSpawnFrequence);
-            SpeedUpTimer(speedUpFrequence);
-        }
     }
+
+    private void OnDestroy()
+    {
+        GameClock.clockTick -= FoodSpawnTimer;
+    }
+
     //=======================================================================
     //Init
     //=======================================================================
@@ -63,6 +54,7 @@ public class GameManager : MonoBehaviour
         //Initialize actions
         controlActions.Enable();
         pauseAction = controlActions.FindAction("Pause");
+        GameClock.clockTick += FoodSpawnTimer;
 
         //Initialize managers
         mapManager.Initialize();
@@ -81,50 +73,14 @@ public class GameManager : MonoBehaviour
     //=======================================================================
     //Timers
     //=======================================================================
-    private void MoveTimer(float frequence)
+    private void FoodSpawnTimer()
     {
-        //in Seconds
-        moveTimer += Time.deltaTime;
+        foodTimer += 1.0f;
 
-        //if 'moveFrequence' seconds have passed
-        if (moveTimer >= frequence)
-        {
-            //Invoke event
-            GameClock?.Invoke();
-            //move timer back by one second
-            moveTimer = 0.0f;
-        }
-    }
-    //-------------------------------------------------
-    private void FoodSpawnTimer(float frequence)
-    {
-        //update timer
-        foodTimer += Time.deltaTime;
-
-        //if if 'frequence' seconds have passed
-        if (foodTimer >= frequence)
+        if(foodTimer >= foodSpawnFrequence)
         {
             mapManager.SpawnFood();
-            
-            //move timer back by 'frequence' seconds
             foodTimer = 0.0f;
-        }
-    }
-    //-------------------------------------------------
-    private void SpeedUpTimer(float frequence)
-    {
-        //update timer
-        speedUpTimer += Time.deltaTime;
-
-        //if if 'frequence' seconds have passed
-        if (speedUpTimer >= frequence)
-        {
-            //speed up movement frequence
-            moveFrequence *= speedUpFactor;
-            Debug.Log("Movement frequence changed to: " + moveFrequence);
-
-            //move timer back by 'frequence' seconds
-            speedUpTimer = 0.0f;
         }
     }
   

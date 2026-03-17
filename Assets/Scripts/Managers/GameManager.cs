@@ -57,6 +57,9 @@ public class GameManager : MonoBehaviour
     //=======================================================================
     private void Init()
     {
+        //Set current scene as active
+        SceneManager.SetActiveScene(gameObject.scene);
+
         //Initialize actions
         controlActions.Enable();
         pauseAction = controlActions.FindAction("Pause");

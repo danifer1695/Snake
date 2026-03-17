@@ -211,10 +211,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7797721136399980023, guid: 27b06abf3e846f546b565fd0990ab102, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797721136399980023, guid: 27b06abf3e846f546b565fd0990ab102, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797721136399980023, guid: 27b06abf3e846f546b565fd0990ab102, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 670214901}
+    - target: {fileID: 7797721136399980023, guid: 27b06abf3e846f546b565fd0990ab102, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReloadLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797721136399980023, guid: 27b06abf3e846f546b565fd0990ab102, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LoaderMenuButton, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5130464151864527727, guid: 27b06abf3e846f546b565fd0990ab102, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 670214901}
   m_SourcePrefab: {fileID: 100100000, guid: 27b06abf3e846f546b565fd0990ab102, type: 3}
 --- !u!224 &670214898 stripped
 RectTransform:
@@ -226,6 +249,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5476732351737216245, guid: 27b06abf3e846f546b565fd0990ab102, type: 3}
   m_PrefabInstance: {fileID: 670214897}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &670214900 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5130464151864527727, guid: 27b06abf3e846f546b565fd0990ab102, type: 3}
+  m_PrefabInstance: {fileID: 670214897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &670214901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670214900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cea29edab9bfbb438ef747576b4af30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoaderMenuButton
 --- !u!1 &965206695
 GameObject:
   m_ObjectHideFlags: 0

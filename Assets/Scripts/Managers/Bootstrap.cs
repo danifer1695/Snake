@@ -24,6 +24,9 @@ public class Bootstrap : MonoBehaviour
         yield return load;
 
         SceneManager.SetActiveScene(SceneManager.GetSceneByName("Title"));
+        
+        //Unload bootstrapper scene
+        yield return SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("mainScene"));
     }
 
 }

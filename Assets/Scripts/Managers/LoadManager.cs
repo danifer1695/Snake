@@ -27,6 +27,11 @@ public class LoadManager : MonoBehaviour
         StartCoroutine(LoadGame(mapName));
     }
 
+    public void Reload()
+    {
+        StartCoroutine(ReloadCurrentLevel());
+    }
+
     public void GoToMainMenu()
     {
         StartCoroutine(ReturnToMainMenu());
@@ -51,6 +56,22 @@ public class LoadManager : MonoBehaviour
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(mapName));
 
         //Show HUD if we are to implement one
+    }
+
+    IEnumerator ReloadCurrentLevel()
+    {
+        //Hide pause menu
+        UIManager.Instance.HidePauseMenu();
+
+        string sceneName = SceneManager.GetActiveScene().name;
+        //Unload current level
+        yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+
+        //Load it back up
+        yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+
+        //Set it as active scene
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
     }
 
     //This co-routine is called when we want to go back to main menu from the pause menu
